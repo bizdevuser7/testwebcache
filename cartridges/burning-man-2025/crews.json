@@ -1,0 +1,43 @@
+{
+  "groupChats": [
+    {
+      "id": "thread-broadcasts",
+      "name": "Broadcasts",
+      "crewId": "event-ops"
+    },
+    {
+      "id": "thread-lead",
+      "name": "Event Ops Leads",
+      "crewId": "event-ops"
+    },
+    {
+      "id": "thread-map-stewards",
+      "name": "Map Stewards",
+      "crewId": "map-stewards"
+    },
+    {
+      "id": "thread-emergency-services",
+      "name": "Emergency Services",
+      "crewId": "emergency-services"
+    }
+  ],
+  "crews": [
+    {
+      "id": "event-ops",
+      "label": "Event Ops"
+    },
+    {
+      "id": "map-stewards",
+      "label": "Map Stewards"
+    },
+    {
+      "id": "emergency-services",
+      "label": "Emergency Services"
+    }
+  ],
+  "crew": [],
+  "assignmentEmptyState": {
+    "crewHelpText": "Scan a crew QR code to check in",
+    "taskHelpText": "No Burning Man 2025 assignment slots have been seeded yet"
+  }
+}
