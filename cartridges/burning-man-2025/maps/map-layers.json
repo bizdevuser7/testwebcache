@@ -1,0 +1,88 @@
+{
+  "groups": [
+    {
+      "id": "city",
+      "title": "City",
+      "initiallyExpanded": true,
+      "layers": [
+        {
+          "id": "civic-hubs",
+          "label": "Civic hubs",
+          "description": "Portals, promenades, plazas, and public gathering points",
+          "visible": true,
+          "kind": "symbol"
+        },
+        {
+          "id": "landmarks",
+          "label": "Landmarks",
+          "description": "The Man, The Temple, and central reference landmarks",
+          "visible": true,
+          "kind": "symbol"
+        },
+        {
+          "id": "plazas",
+          "label": "Plazas",
+          "description": "Named Black Rock City plaza polygons",
+          "visible": true,
+          "kind": "fill"
+        },
+        {
+          "id": "trash-fence",
+          "label": "Trash fence",
+          "description": "Outer trash fence polygon",
+          "visible": false,
+          "kind": "fill"
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "title": "Services",
+      "initiallyExpanded": true,
+      "layers": [
+        {
+          "id": "toilets",
+          "label": "Toilets",
+          "description": "Toilet banks from Totem Grid prototype data",
+          "visible": true,
+          "kind": "symbol"
+        },
+        {
+          "id": "ice",
+          "label": "Ice",
+          "description": "Arctica ice locations",
+          "visible": true,
+          "kind": "symbol"
+        },
+        {
+          "id": "emergency-services",
+          "label": "Emergency services",
+          "description": "Medical, fire, ranger, and response stations",
+          "visible": true,
+          "kind": "symbol"
+        },
+        {
+          "id": "logistics",
+          "label": "Logistics",
+          "description": "Access, arrivals, DMV, and perimeter logistics points",
+          "visible": true,
+          "kind": "symbol"
+        }
+      ]
+    },
+    {
+      "id": "reference",
+      "title": "Reference",
+      "initiallyExpanded": false,
+      "layers": [
+        {
+          "id": "boundary-waypoints",
+          "label": "Boundary waypoints",
+          "description": "CPNS reference waypoints around the city boundary",
+          "visible": false,
+          "kind": "symbol"
+        }
+      ]
+    }
+  ]
+}

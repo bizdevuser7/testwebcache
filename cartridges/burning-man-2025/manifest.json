@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "event-cartridge/v0",
+  "version": 2,
+  "cartridgeId": "burning-man-2025",
+  "event": {
+    "id": "burning-man-2025",
+    "title": "Burning Man 2025",
+    "dateRange": "August 24-September 1, 2025",
+    "venue": "Black Rock City, Nevada",
+    "organizerName": "Burning Man Project",
+    "contentsSummary": "Black Rock City map seeded from Totem Grid Dry Run 2025",
+    "timezone": "America/Los_Angeles"
+  },
+  "source": {
+    "type": "generated",
+    "reference": "totem-grid-darwin",
+    "note": "Generated from Totem Grid Dry Run 2025 map data. Real Burning Man 2025 map hosted in Way2Crew for demonstration and community testing. Map will be updated for 2026 based on official data from Burning Man Innovators (https://innovate.burningman.org/)."
+  },
+  "phases": [
+    {
+      "id": "setup",
+      "label": "Setup",
+      "sortOrder": 0
+    },
+    {
+      "id": "active",
+      "label": "Active",
+      "sortOrder": 1
+    },
+    {
+      "id": "teardown",
+      "label": "Teardown",
+      "sortOrder": 2
+    }
+  ],
+  "files": {
+    "crews": "crews.json",
+    "venueGeoJSON": "maps/venue.geojson",
+    "mapLayers": "maps/map-layers.json",
+    "mapQuickFilters": "maps/map-quick-filters.json",
+    "tasks": "tasks.json",
+    "guides": "guides/index.json",
+    "tiles": "tiles/manifest.json"
+  },
+  "communication": {
+    "broadcastThreadId": "thread-broadcasts",
+    "teamLeadChannelThreadId": "thread-lead"
+  },
+  "remote": {
+    "manifestPath": "manifest.json",
+    "verification": "sha256",
+    "lastGoodFallback": true
+  }
+}

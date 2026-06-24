@@ -1,0 +1,40 @@
+{
+  "filters": [
+    {
+      "id": "toilets",
+      "label": "Toilets",
+      "match": {
+        "layerIds": [
+          "toilets"
+        ]
+      }
+    },
+    {
+      "id": "emergency",
+      "label": "Emergency",
+      "match": {
+        "layerIds": [
+          "emergency-services"
+        ]
+      }
+    },
+    {
+      "id": "landmarks",
+      "label": "Landmarks",
+      "match": {
+        "layerIds": [
+          "landmarks"
+        ]
+      }
+    },
+    {
+      "id": "plazas",
+      "label": "Plazas",
+      "match": {
+        "layerIds": [
+          "plazas"
+        ]
+      }
+    }
+  ]
+}

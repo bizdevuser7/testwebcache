@@ -1,0 +1,27 @@
+{
+  "tilesets": [
+    {
+      "id": "brc-base",
+      "format": "pmtiles",
+      "file": "base.pmtiles",
+      "styles": {
+        "light": "style-light.json",
+        "dark": "style-dark.json"
+      },
+      "bounds": {
+        "west": -119.235,
+        "south": 40.763,
+        "east": -119.174,
+        "north": 40.809
+      },
+      "minZoom": 0,
+      "maxZoom": 15,
+      "source": {
+        "type": "map",
+        "reference": "https://build.protomaps.com/20260521.pmtiles",
+        "note": "Extracted with pmtiles extract --bbox=-119.235,40.763,-119.174,40.809 --maxzoom=15."
+      },
+      "sha256": "8298fa54e1a97c112d8f754a7efb0ea0fae2981bba603af85b7972cc99068ad3"
+    }
+  ]
+}
