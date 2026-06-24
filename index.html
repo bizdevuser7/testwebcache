@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AW2 — FAQ | Everything You Need to Know</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:#0D1B2A; --navy-mid:#1B2E42; --teal:#2EC4B6; --teal-light:#D0F4F1;
+  --white:#F8F9FA; --steel:#8BA0B4; --steel-lt:#B4C5D4; --bdl:#E2EAF0;
+  --serif:'DM Serif Display',serif; --sans:'DM Sans',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:var(--sans);background:var(--white);color:var(--navy);}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:72px;background:rgba(13,27,42,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(46,196,182,0.15);}
+.logo{display:flex;align-items:baseline;gap:1px;text-decoration:none;}
+.logo-aw{font-family:var(--sans);font-weight:300;font-size:26px;color:var(--white);}
+.logo-2{font-family:var(--sans);font-weight:900;font-size:26px;color:var(--teal);}
+.nav-cta{background:var(--teal);color:var(--navy);padding:10px 22px;border-radius:2px;font-weight:700;font-size:13px;text-decoration:none;}
+
+.page-hero{background:var(--navy);padding:140px 48px 80px;text-align:center;position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50%,rgba(46,196,182,0.06) 0%,transparent 70%);}
+.page-hero-inner{max-width:640px;margin:0 auto;position:relative;z-index:1;}
+.lbl{font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:16px;}
+.ph1{font-family:var(--serif);font-size:clamp(36px,4.5vw,56px);color:var(--white);line-height:1.1;margin-bottom:16px;}
+.ph1 em{color:var(--teal);font-style:italic;}
+.psub{font-size:17px;line-height:1.8;color:var(--steel-lt);}
+
+.section{padding:80px 48px;}
+.inn{max-width:1100px;margin:0 auto;}
+
+/* FAQ LAYOUT */
+.faq-layout{display:grid;grid-template-columns:240px 1fr;gap:60px;align-items:start;}
+.faq-nav{position:sticky;top:96px;}
+.faq-nav h4{font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--steel);margin-bottom:16px;}
+.faq-nav a{display:block;font-size:14px;color:var(--navy);text-decoration:none;padding:8px 0;border-bottom:1px solid var(--bdl);transition:color .2s;}
+.faq-nav a:hover{color:var(--teal);}
+.faq-nav a.active{color:var(--teal);font-weight:600;}
+
+/* FAQ SECTIONS */
+.faq-section{margin-bottom:60px;}
+.faq-section-title{font-family:var(--serif);font-size:28px;color:var(--navy);margin-bottom:28px;padding-bottom:16px;border-bottom:2px solid var(--teal);}
+.faq-item{border-bottom:1px solid var(--bdl);}
+.faq-q{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:20px 0;cursor:pointer;
+  font-size:16px;font-weight:600;color:var(--navy);line-height:1.4;
+  transition:color .2s;
+}
+.faq-q:hover{color:var(--teal);}
+.faq-toggle{width:24px;height:24px;border-radius:50%;border:1px solid var(--bdl);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-left:16px;transition:all .2s;font-size:16px;color:var(--steel);}
+.faq-a{
+  max-height:0;overflow:hidden;
+  font-size:15px;line-height:1.75;color:#4a5f74;
+  transition:max-height .3s ease,padding .3s ease;
+}
+.faq-a.open{max-height:400px;padding-bottom:20px;}
+.faq-item.open .faq-toggle{background:var(--teal);border-color:var(--teal);color:var(--navy);transform:rotate(45deg);}
+.faq-item.open .faq-q{color:var(--teal);}
+
+/* CTA */
+.cta{background:var(--navy);padding:80px 48px;text-align:center;}
+.cta h2{font-family:var(--serif);font-size:clamp(28px,3vw,44px);color:var(--white);margin-bottom:16px;}
+.cta h2 em{color:var(--teal);font-style:italic;}
+.cta p{font-size:16px;color:var(--steel-lt);max-width:480px;margin:0 auto 32px;line-height:1.8;}
+.btn-p{display:inline-flex;background:var(--teal);color:var(--navy);padding:16px 32px;border-radius:2px;font-weight:700;font-size:15px;text-decoration:none;transition:all .2s;margin:6px;}
+.btn-p:hover{background:#25a99d;}
+.btn-s{display:inline-flex;border:1px solid rgba(46,196,182,0.3);color:var(--steel-lt);padding:14px 30px;border-radius:2px;font-size:15px;text-decoration:none;transition:all .2s;margin:6px;}
+.btn-s:hover{border-color:var(--teal);color:var(--teal);}
+
+footer{background:#060f18;padding:40px 48px;border-top:1px solid rgba(46,196,182,0.1);}
+.footer-b{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+.footer-copy{font-size:12px;color:var(--steel);}
+.footer-tl{font-size:13px;font-weight:700;color:var(--teal);}
+
+@media(max-width:900px){
+  nav{padding:0 24px;}
+  .faq-layout{grid-template-columns:1fr;}
+  .faq-nav{display:none;}
+  .section{padding:60px 24px;}
+}
+
+  .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+  .nav-links a { font-size: 13px; font-weight: 500; color: var(--steel-lt); text-decoration: none; letter-spacing: 0.05em; transition: color .2s; }
+  .nav-links a:hover { color: var(--teal); }
+  .nav-cta { background: var(--teal) !important; color: var(--navy) !important; padding: 9px 20px; border-radius: 2px; font-weight: 700 !important; }
+  .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; }
+  .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; }
+  @media (max-width: 900px) {
+    .nav-hamburger { display: flex; }
+    .nav-links { display: none; position: absolute; top: 72px; left: 0; right: 0; background: var(--navy); flex-direction: column; padding: 20px 24px; gap: 0; border-bottom: 1px solid rgba(46,196,182,0.15); z-index: 99; }
+    .nav-links.open { display: flex; }
+    .nav-links li { width: 100%; }
+    .nav-links a { display: block; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 15px; }
+    .nav-links .nav-cta { margin-top: 12px; text-align: center; border-bottom: none; }
+  }
+
+  footer { background: #060f18; padding: 56px 48px 40px; border-top: 1px solid rgba(46,196,182,0.1); }
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+  .footer-brand p { font-size: 14px; line-height: 1.7; color: var(--steel); margin-top: 12px; max-width: 280px; }
+  .footer-col h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--steel); margin-bottom: 16px; }
+  .footer-col a { display: block; font-size: 14px; color: var(--steel); text-decoration: none; margin-bottom: 10px; transition: color .2s; }
+  .footer-col a:hover { color: var(--teal); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 32px; display: flex; justify-content: space-between; align-items: center; }
+  .footer-copy { font-size: 12px; color: var(--steel); }
+  .footer-tagline { font-size: 13px; font-weight: 700; color: var(--teal); }
+  @media (max-width: 900px) { .footer-top { grid-template-columns: 1fr 1fr; } footer { padding: 48px 24px 32px; } }
+  @media (max-width: 600px) { .footer-top { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; gap: 12px; text-align: center; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo"><span class="logo-aw">AW</span><span class="logo-2">2</span></a>
+  <ul class="nav-links">
+    <li><a href="/tests">Tests</a></li>
+    <li><a href="/science">Why Cellular</a></li>
+    <li><a href="/results">What to Expect</a></li>
+    <li><a href="/about">About Andy</a></li>
+    <li><a href="/faq">FAQ</a></li>
+    <li><a href="/partners">Partner With Us</a></li>
+    <li><a href="/start" class="nav-cta">Order Test Kit</a></li>
+  </ul>
+  <button class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="lbl">Questions & Answers</span>
+    <h1 class="ph1">You have questions.<br><em>Real answers here.</em></h1>
+    <p class="psub">Everything you need to know about AW2, the testing process, your personalized supplement blend, and what to expect on your journey.</p>
+  </div>
+</div>
+
+<section class="section" style="background:var(--white);">
+  <div class="inn">
+    <div class="faq-layout">
+
+      <!-- SIDEBAR NAV -->
+      <nav class="faq-nav">
+        <h4>Jump to</h4>
+        <a href="#about-aw2">About AW2</a>
+        <a href="#testing">The Testing Process</a>
+        <a href="#supplements">Your Supplement Blend</a>
+        <a href="#pricing">Pricing & Subscription</a>
+        <a href="#progress">Progress & Results</a>
+        <a href="#consulting">Consultations</a>
+      </nav>
+
+      <!-- FAQ CONTENT -->
+      <div>
+
+        <!-- ABOUT AW2 -->
+        <div class="faq-section" id="about-aw2">
+          <h2 class="faq-section-title">About AW2</h2>
+
+          <div class="faq-item">
+            <div class="faq-q">What is AW2? <span class="faq-toggle">+</span></div>
+            <div class="faq-a">AW2 is a personalized supplement brand built on cellular-level testing. We start with a Cellular Nutrition Assay — the deepest, most accurate nutritional measurement available — and use that data to build a supplement blend formulated specifically for your body's needs. Not a quiz. Not a guess. Your cellular data drives everything.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">How is AW2 different from other personalized supplement companies? <span class="faq-toggle">+</span></div>
+            <div class="faq-a">Most companies claiming personalization are doing one of three things: asking you ten questions, reading your DNA for predispositions, or testing serum-level blood markers. None of those tell you what's happening inside your cells right now. AW2 does intracellular cellular micronutrient testing — measuring nutrients inside your cells, where metabolism actually happens. That's a genuine clinical differentiation that puts AW2 in a category most companies can't access.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Who is AW2 for? <span class="faq-toggle">+</span></div>
+            <div class="faq-a">AW2 is for anyone who knows more is possible. You invest in your health — you train, you eat well, you take care of yourself — and yet something still feels like it's not quite where it could be. Maybe your energy isn't where you want it. Recovery feels slower than it should. You know you're capable of more. AW2 gives you the data to understand why, and the personalized supplement blend to feel the difference.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Who created AW2? <span class="faq-toggle">+</span></div>
+            <div class="faq-a">AW2 was founded by Andrew Way Jr. — U.S. Navy veteran, best-selling author of Always Adventure, and founder of STL TRIM health and performance coaching. AW2 is the personalized supplement expression of the Smart Health™ Framework Andy developed at STL TRIM — built on one principle: Test Don't Guess.</div>
+          </div>
+        </div>
+
+        <!-- TESTING PROCESS -->
+        <div class="faq-section" id="testing">
+          <h2 class="faq-section-title">The Testing Process</h2>
+
+          <div class="faq-item">
+            <div class="faq-q">What is a Cellular Nutrition Assay (CNA)? <span class="faq-toggle">+</span></div>
+            <div class="faq-a">A Cellular Nutrition Assay measures nutrients inside your cells — not just what's circulating in your blood. Standard blood tests measure serum levels (the fluid around your cells). A CNA goes deeper, measuring what's actually fueling your cells where metabolism happens. You can have normal serum levels and still have your cellular performance limited. The CNA reveals the complete picture — 30+ vitamins, minerals, amino acids, antioxidants, and metabolites at the intracellular level.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">How does the blood draw work? <span class="faq-toggle">+</span></div>
+            <div class="faq-a">A licensed phlebotomist collects your blood sample — included in your $499 test kit price. AW2 coordinates the phlebotomy service for you. It's a simple blood draw, quick and straightforward. You don't need to go to a lab or arrange anything yourself. Everything is handled through AW2.</div>
+          
+          <div class="faq-item">
+            <div class="faq-q">Who runs the cellular testing behind AW2? <span class="faq-toggle">+</span></div>
+            <div class="faq-a">AW2 partners with a CLIA-certified, FDA-inspected, and internationally accredited specialty clinical laboratory — one of the most credentialed cellular testing facilities in the world. The lab operates entirely in the background. What you experience is the AW2 process from start to finish — the test kit, the results, the personalized blend, and the guidance. The lab is the engine. AW2 is everything else.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Is the testing the same quality used by elite athletes and clinicians? <span class="faq-toggle">+</span></div>
+            <div class="faq-a">Yes. The cellular testing behind AW2 is the same clinical-grade technology trusted by professional athletes across the NBA, NFL, NHL, and MLB — as well as practitioners in functional medicine and clinical nutrition worldwide. AW2 makes that same testing accessible to anyone who wants it, without needing a referral or a specialist appointment.</div>
+          </div>
+
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">How long does it take to get results? <span class="faq-toggle">+</span></div>
+            <div class="faq-a">Your sample is analyzed and results are ready in 10–14 days from collection. Within 48 hours of your results being received, your personalized supplement blend is designed and your first shipment is prepared.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">What other tests does AW2 offer? <span class="faq-toggle">+</span></div>
+            <div class="faq-a">AW2 offers a complete cellular health diagnostic platform — five tests in total. The CNA is the foundation. Additional tests include the ALCAT Food Sensitivity Test (200+ foods and substances), the CICA Array (Celiac, IBS & Crohn's markers), the MethylDetox Profile (genetic methylation and detox markers), and the Telomere Length Test (biological age measurement). These can be added individually or discussed during a consultation.</div>
+          </div>
+        </div>
+
+        <!-- SUPPLEMENTS -->
+        <div class="faq-section" id="supplements">
+          <h2 class="faq-section-title">Your Supplement Blend</h2>
+
+          <div class="faq-item">
+            <div class="faq-q">What makes my supplement blend personalized? <span class="faq-toggle">+</span></div>
+            <div class="faq-a">Your supplement blend is built directly from your cellular data — every ingredient, every dose is selected based on what your specific cells need to perform at their best. No two AW2 blends are the same because no two people have the same cellular profile. This is what separates AW2 from every generic supplement on the market.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">What are the supplement add-ons? <span class="faq-toggle">+</span></div>
+            <div class="faq-a">Once your base CNA protocol is established, you can add targeted support protocols formulated right into your existing monthly blend — no extra products, no extra shipping. Current add-ons include: Sleep Support, Cognitive Support, Heart Health, and Gut Health — each $49/month. Bundle pricing: 2 for $89, 3+ for $119/month.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">How is my blend delivered? <span class="faq-toggle">+</span></div>
+            <div class="faq-a">Your personalized supplement blend ships every month — one formula, built for your body, delivered to your door. Monthly auto-ship keeps your protocol consistent. You can adjust, pause, or cancel your subscription at any time.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Why does supplement pricing vary? <span class="faq-toggle">+</span></div>
+            <div class="faq-a">Your base protocol is $399/month. Because every AW2 blend is uniquely formulated for your cellular data, the exact composition varies. Your protocol pricing is presented after your results are reviewed — before any commitment is made. You are never charged for supplements without knowing the cost first. Clients who consolidate multiple supplements typically save an average of 30% compared to their current stack.</div>
+          </div>
+        </div>
+
+        <!-- PRICING -->
+        <div class="faq-section" id="pricing">
+          <h2 class="faq-section-title">Pricing & Subscription</h2>
+
+          <div class="faq-item">
+            <div class="faq-q">What does AW2 cost? <span class="faq-toggle">+</span></div>
+            <div class="faq-a">Getting started: $499 — includes your CNA test kit and licensed phlebotomist. Monthly subscription: $399/month — your personalized supplement blend. Add-ons: $49/month each (Sleep, Cognitive, Heart Health, Gut Health). Bundle add-ons: 2 for $89, 3+ for $119/month. Progress Assessment (retest): $499 — recommended every 6 months. Personal Consultation: $99 per 30-minute session.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Can I cancel my subscription? <span class="faq-toggle">+</span></div>
+            <div class="faq-a">Yes — you can adjust, pause, or cancel your AW2 subscription at any time. There are no long-term commitments. We recommend staying with your protocol for a minimum of 90 days to give your cellular nutrition time to shift, but the choice is always yours.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Is the retest the same price as onboarding? <span class="faq-toggle">+</span></div>
+            <div class="faq-a">Yes — your Progress Assessment retest is $499, the same as your initial test kit. This includes the full CNA analysis and licensed phlebotomist. No additional fees. At 6 months, seeing your cellular data change is one of the most motivating moments in the AW2 journey.</div>
+          </div>
+        </div>
+
+        <!-- PROGRESS -->
+        <div class="faq-section" id="progress">
+          <h2 class="faq-section-title">Progress & Results</h2>
+
+          <div class="faq-item">
+            <div class="faq-q">When will I feel a difference? <span class="faq-toggle">+</span></div>
+            <div class="faq-a">Most AW2 clients notice changes in energy, recovery, and focus within the first 30–60 days. Significant cellular-level change typically takes 90 days — which is why we call the first three months the Foundational Phase. Your 6-month Progress Assessment is where the data will show you measurable cellular improvement. The goal isn't just feeling better — it's proving it.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">What is a Progress Assessment? <span class="faq-toggle">+</span></div>
+            <div class="faq-a">A Progress Assessment is a full retest — exactly like your initial CNA — done at 6 months. It measures how your cellular nutrition levels have changed since starting your protocol. You'll see exactly which markers improved, where more work is possible, and your protocol will be updated based on the new data. It's how AW2 proves the work — not just tells you about it.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">How often should I retest? <span class="faq-toggle">+</span></div>
+            <div class="faq-a">AW2 recommends a Progress Assessment every 6 months. Your cellular nutrition status changes as your protocol works — retesting ensures your blend stays calibrated to where your body is now, not where it was when you started. Your progress deserves to be measured.</div>
+          </div>
+        </div>
+
+        <!-- CONSULTATIONS -->
+        <div class="faq-section" id="consulting">
+          <h2 class="faq-section-title">Consultations</h2>
+
+          <div class="faq-item">
+            <div class="faq-q">What is a Personalized Review Consultation? <span class="faq-toggle">+</span></div>
+            <div class="faq-a">A $99, 30-minute direct consultation with Andy — focused on your data, your goals, and your protocol. You can book at any milestone: after your initial results, at 90 days, before your retest, when considering add-ons, or any time you want to go deeper. Real answers, not a form email.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Do I need a consultation to get started? <span class="faq-toggle">+</span></div>
+            <div class="faq-a">No — you can order your test kit directly at $499 without a prior consultation. Your protocol is designed based on your cellular results and you'll receive full guidance throughout the process. Consultations are available any time you want personalized guidance from Andy directly.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>Still have questions?<br><em>Andy has answers.</em></h2>
+  <p>Book a $99 consultation and get 30 minutes of direct, personalized guidance. Or start with your test kit and see your cellular data for yourself.</p>
+  <div>
+    <a href="/start" class="btn-p">Order Test Kit — $499</a>
+    <a href="/book" class="btn-s">Book a Consultation — $99</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="logo"><span class="logo-aw">AW</span><span class="logo-2">2</span></a>
+        <p>Personalized supplements formulated at the cellular level. The deepest, most accurate nutritional measurement available. Test Don't Guess.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Get Started</h4>
+        <a href="/start">Order Test Kit &#x2014; $499</a>
+        <a href="/tests">View All Tests</a>
+        <a href="/book">Book a Consult &#x2014; $99</a>
+        <a href="/results">What to Expect</a>
+      </div>
+      <div class="footer-col">
+        <h4>Learn</h4>
+        <a href="/science">Why Cellular Testing</a>
+        <a href="/faq">FAQ</a>
+        <a href="/about">About Andy</a>
+        <a href="/partners">Partner Program</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:info@myaw2.com">info@myaw2.com</a>
+        <a href="tel:3144558746">314-455-8746</a>
+        <a href="/book">Book a Consultation</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&#169; 2026 AW2 by STL TRIM. All rights reserved. myaw2.com</p>
+      <span class="footer-tagline">Test Don&#x2019;t Guess.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-q').addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-a').classList.remove('open');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      item.querySelector('.faq-a').classList.add('open');
+    }
+  });
+});
+
+// Reveal
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach((e,i) => { if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('visible'),i*60); obs.unobserve(e.target); } });
+}, {threshold:0.08});
+reveals.forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
+
