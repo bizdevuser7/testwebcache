@@ -1,6 +1,6 @@
 {
   "schemaVersion": "event-cartridge/v0",
-  "version": 3,
+  "version": 4,
   "cartridgeId": "burning-man-2025",
   "event": {
     "id": "burning-man-2025",
