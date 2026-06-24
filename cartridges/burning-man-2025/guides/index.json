@@ -1,0 +1,18 @@
+{
+  "metadata": {
+    "source": {
+      "type": "generated",
+      "reference": "totem-grid-darwin",
+      "note": "Generated guide documenting the source-data seed decisions."
+    }
+  },
+  "guides": [
+    {
+      "id": "source-data",
+      "title": "Source Data",
+      "icon": "wayfinding",
+      "summary": "What was imported from Totem Grid and what still needs source data",
+      "file": "source-data.md"
+    }
+  ]
+}
