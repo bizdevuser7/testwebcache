@@ -1,0 +1,49 @@
+{
+  "filters": [
+    {
+      "id": "phase",
+      "label": "Shift",
+      "kind": "singleSelect",
+      "initialValue": "ingress",
+      "options": [
+        {
+          "id": "ingress",
+          "label": "Shift 1",
+          "match": {
+            "taskProperty": "phases",
+            "contains": "ingress"
+          }
+        },
+        {
+          "id": "egress",
+          "label": "Shift 2",
+          "match": {
+            "taskProperty": "phases",
+            "contains": "egress"
+          }
+        }
+      ]
+    },
+    {
+      "id": "assignment",
+      "label": "Assignment",
+      "kind": "singleSelect",
+      "options": [
+        {
+          "id": "openTasks",
+          "label": "Open tasks",
+          "match": {
+            "assignment": "hasOpenSlots"
+          }
+        },
+        {
+          "id": "assignedTasks",
+          "label": "Assigned tasks",
+          "match": {
+            "assignment": "hasAssignedCrew"
+          }
+        }
+      ]
+    }
+  ]
+}

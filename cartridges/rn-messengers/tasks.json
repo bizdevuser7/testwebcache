@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "source": {
+      "type": "manual",
+      "note": "Hand-authored messenger tasks for simulator task-assignment testing."
+    }
+  },
+  "tasks": [
+    {
+      "id": "task-messenger-p-a-1-check-in",
+      "namedShift": "ingress",
+      "crewId": "crw_messengers",
+      "matchDaysOnly": true,
+      "mapPinId": "lm-primary-p-a-1",
+      "label": "Check in at Terminal & Station",
+      "summary": "Confirm messenger coverage at P-A-1 and report readiness to the team lead.",
+      "assignedCrewIds": [],
+      "phases": [
+        "ingress"
+      ],
+      "shift": "Shift 1",
+      "shifts": [
+        "Shift 1"
+      ]
+    },
+    {
+      "id": "task-messenger-gate-14-delivery",
+      "namedShift": "ingress",
+      "crewId": "crw_messengers",
+      "matchDaysOnly": true,
+      "mapPinId": "fff-10-fff-o-hastings-and-lillooet-ne-corner-near-gate-14",
+      "label": "Deliver packet near Gate 14",
+      "summary": "Run the supervisor packet to the Gate 14 corner and confirm drop-off in chat.",
+      "assignedCrewIds": [],
+      "phases": [
+        "ingress"
+      ],
+      "shift": "Shift 1",
+      "shifts": [
+        "Shift 1"
+      ]
+    },
+    {
+      "id": "task-messenger-renfrew-radio-battery",
+      "namedShift": "ingress",
+      "crewId": "crw_messengers",
+      "matchDaysOnly": true,
+      "mapPinId": "fff-1-fff-o-hastings-and-renfrew-se-corner",
+      "label": "Swap radio battery at Renfrew",
+      "summary": "Pick up the low radio battery and return it to the team lead for charging.",
+      "assignedCrewIds": [],
+      "phases": [
+        "ingress"
+      ],
+      "shift": "Shift 1",
+      "shifts": [
+        "Shift 1"
+      ]
+    },
+    {
+      "id": "task-messenger-egress-status-sweep",
+      "namedShift": "egress",
+      "crewId": "crw_messengers",
+      "matchDaysOnly": true,
+      "mapPinId": "fff-2-fff-o-hastings-and-renfrew-ne-corner",
+      "label": "Egress status sweep",
+      "summary": "Collect final status from nearby posts and relay blockers to the Team Leads channel.",
+      "assignedCrewIds": [],
+      "phases": [
+        "egress"
+      ],
+      "shift": "Shift 2",
+      "shifts": [
+        "Shift 2"
+      ]
+    },
+    {
+      "id": "task-messenger-supply-return",
+      "namedShift": "egress",
+      "crewId": "crw_messengers",
+      "matchDaysOnly": true,
+      "mapPinId": "lm-primary-p-a-2",
+      "label": "Return spare supplies",
+      "summary": "Bring unused wristbands and printed handouts back to the primary station.",
+      "assignedCrewIds": [],
+      "phases": [
+        "egress"
+      ],
+      "shift": "Shift 2",
+      "shifts": [
+        "Shift 2"
+      ]
+    }
+  ]
+}

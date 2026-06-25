@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "sources": [
+      {
+        "name": "Way2Crew demo guides",
+        "source": "Hand-authored markdown for vancouver-demo"
+      }
+    ],
+    "source": {
+      "type": "manual",
+      "note": "vancouver-demo guides; see metadata.sources"
+    }
+  },
+  "guides": [
+    {
+      "id": "match-day-arrivals",
+      "title": "Match Day Arrivals",
+      "icon": "arrival",
+      "summary": "Gate support, queue flow, and guest handoffs",
+      "file": "match-day-arrivals.md"
+    },
+    {
+      "id": "radio-escalation",
+      "title": "Radio & Escalation",
+      "icon": "radio",
+      "summary": "Clear radio calls for routine and urgent issues",
+      "file": "radio-escalation.md"
+    },
+    {
+      "id": "fan-festival-wayfinding",
+      "title": "Fan Festival Wayfinding",
+      "icon": "wayfinding",
+      "summary": "PNE Amphitheatre directions and visitor support",
+      "file": "fan-festival-wayfinding.md"
+    }
+  ]
+}

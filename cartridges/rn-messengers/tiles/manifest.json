@@ -1,0 +1,26 @@
+{
+  "tilesets": [
+    {
+      "id": "venue-base",
+      "format": "pmtiles",
+      "file": "pne-hastings.pmtiles",
+      "sha256": "90e67f80b0c8ae648daf9873830f7792680dd61ac62af8e58e602c2518871042",
+      "styles": {
+        "light": "style-light.json",
+        "dark": "style-dark.json"
+      },
+      "bounds": {
+        "west": -123.28,
+        "south": 49.18,
+        "east": -122.88,
+        "north": 49.40
+      },
+      "minZoom": 0,
+      "maxZoom": 19,
+      "source": {
+        "type": "map",
+        "reference": "https://build.protomaps.com/20260505.pmtiles"
+      }
+    }
+  ]
+}

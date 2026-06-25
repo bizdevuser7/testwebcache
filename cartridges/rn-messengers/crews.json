@@ -1,0 +1,26 @@
+{
+  "groupChats": [
+    {
+      "id": "thread-broadcasts",
+      "name": "Broadcasts",
+      "crewId": "crw_messengers"
+    },
+    {
+      "id": "thread-lead",
+      "name": "Team Leads",
+      "crewId": "crw_messengers"
+    }
+  ],
+  "crews": [
+    {
+      "id": "crw_messengers",
+      "label": "Messengers"
+    }
+  ],
+  "crew": [],
+  "assignmentSlots": [],
+  "assignmentEmptyState": {
+    "crewHelpText": "Redeem your access code to join the Messengers crew",
+    "taskHelpText": "Check in via the crew QR to receive task assignments"
+  }
+}

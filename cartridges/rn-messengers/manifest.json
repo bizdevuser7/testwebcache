@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "event-cartridge/v0",
+  "version": 4,
+  "cartridgeId": "rn-messengers",
+  "event": {
+    "id": "rn-messengers-test",
+    "title": "RN Messengers Test",
+    "venue": "Resilient Networks",
+    "timezone": "America/Vancouver"
+  },
+  "source": {
+    "type": "manual",
+    "note": "Test cartridge for messaging E2E validation with provisioned users."
+  },
+  "phases": [
+    {
+      "id": "ingress",
+      "label": "Ingress",
+      "sortOrder": 0
+    },
+    {
+      "id": "egress",
+      "label": "Egress",
+      "sortOrder": 1
+    }
+  ],
+  "files": {
+    "crews": "crews.json",
+    "venueGeoJSON": "maps/venue.geojson",
+    "mapLayers": "maps/map-layers.json",
+    "mapQuickFilters": "maps/map-quick-filters.json",
+    "taskList": "task-list.json",
+    "tasks": "tasks.json",
+    "guides": "guides/index.json",
+    "tiles": "tiles/manifest.json"
+  },
+  "communication": {
+    "broadcastThreadId": "thread-broadcasts",
+    "teamLeadChannelThreadId": "thread-lead"
+  },
+  "locationSharing": {
+    "geofenceRequired": false
+  },
+  "remote": {
+    "manifestPath": "manifest.json",
+    "verification": "sha256",
+    "lastGoodFallback": true
+  }
+}

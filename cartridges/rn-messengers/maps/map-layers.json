@@ -1,0 +1,118 @@
+{
+  "filters": [
+    {
+      "id": "phase",
+      "label": "Phase",
+      "kind": "singleSelect",
+      "initialValue": "ingress",
+      "options": [
+        {
+          "id": "ingress",
+          "label": "Ingress",
+          "match": {
+            "featureProperty": "phases",
+            "contains": "ingress"
+          }
+        },
+        {
+          "id": "egress",
+          "label": "Egress",
+          "match": {
+            "featureProperty": "phases",
+            "contains": "egress"
+          }
+        }
+      ]
+    },
+    {
+      "id": "match-day",
+      "label": "Match Days",
+      "kind": "toggle",
+      "labelOn": "Show match day locations",
+      "initialValue": false,
+      "off": {
+        "match": {
+          "featureProperty": "onlyMatchDays",
+          "absentOrNotEquals": true
+        }
+      },
+      "on": {
+        "match": {
+          "any": true
+        }
+      }
+    },
+    {
+      "id": "task",
+      "label": "Task",
+      "kind": "singleSelect",
+      "options": [
+        {
+          "id": "openTasks",
+          "label": "Open tasks",
+          "match": {
+            "task": "hasOpenTasks"
+          }
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "id": "event",
+      "title": "Event locations",
+      "initiallyExpanded": true,
+      "layers": [
+        {
+          "id": "fff",
+          "label": "Fan Festival",
+          "description": "Festival footprint and featured event areas",
+          "visible": true,
+          "kind": "symbol"
+        },
+        {
+          "id": "primary",
+          "label": "Primary locations",
+          "description": "Main crew and guest destinations",
+          "visible": true,
+          "kind": "symbol"
+        },
+        {
+          "id": "secondary",
+          "label": "Secondary locations",
+          "description": "Supporting event locations and waypoints",
+          "visible": true,
+          "kind": "symbol"
+        },
+        {
+          "id": "tertiary",
+          "label": "Tertiary locations",
+          "description": "Lower-priority landmarks and reference points",
+          "visible": true,
+          "kind": "symbol"
+        }
+      ]
+    },
+    {
+      "id": "context",
+      "title": "Context",
+      "initiallyExpanded": false,
+      "layers": [
+        {
+          "id": "operations",
+          "label": "Operations",
+          "description": "Operational buildings and venue boundaries",
+          "visible": true,
+          "kind": "symbol"
+        },
+        {
+          "id": "transit",
+          "label": "Transit",
+          "description": "Nearby transit references",
+          "visible": true,
+          "kind": "symbol"
+        }
+      ]
+    }
+  ]
+}

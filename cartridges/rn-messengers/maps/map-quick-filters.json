@@ -1,0 +1,40 @@
+{
+  "filters": [
+    {
+      "id": "restrooms",
+      "label": "Restrooms",
+      "match": {
+        "pinIcons": [
+          "restroom"
+        ]
+      }
+    },
+    {
+      "id": "first-aid",
+      "label": "First Aid",
+      "match": {
+        "pinIcons": [
+          "firstAid"
+        ]
+      }
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "match": {
+        "pinIcons": [
+          "food"
+        ]
+      }
+    },
+    {
+      "id": "gates",
+      "label": "Gates",
+      "match": {
+        "layerIds": [
+          "primary"
+        ]
+      }
+    }
+  ]
+}
